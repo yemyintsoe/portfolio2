@@ -1,0 +1,340 @@
+/* COMMON STYLES  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #f0f9ff;
+    --main-color: #ec4899;
+    --second-color: #fff;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+#hero,
+#about,
+#skill,
+#service,
+#contact,
+#footer {
+    padding: 30px 0;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 25px;
+}
+
+/* HEREO STYLES  */
+#hero .container {
+    height: 400px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--second-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#hero .container .content {
+    flex-basis: 60%;
+    text-align: center;
+    color: var(--second-color);
+    padding: 0 10px;
+}
+
+#hero .container .content h3,
+h1,
+p {
+    margin-bottom: 20px;
+}
+
+#hero .container .content .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#hero .container .img-div {
+    flex-basis: 40%;
+    height: 100%;
+}
+
+#hero .container .img-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 10%;
+}
+
+/* ABOUT STYLES  */
+#about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .container>div {
+    flex-basis: 50%;
+}
+
+#about .container .img-div img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 100% 10%;
+    display: block;
+    margin: auto;
+    box-shadow: 2px 2px 5px gray;
+}
+
+/* SKILL STYLES  */
+#skill .container {
+    display: flex;
+    align-items: center;
+}
+
+#skill .container>div {
+    flex-basis: 50%;
+}
+
+#skill .container .content .skill-list {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+#skill .container .content .skill-list .skill-item {
+    margin: 5px;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#skill .container .img-div img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* SERVICE STYLES  */
+#service .container {
+    display: flex;
+    gap: 30px;
+}
+
+#service .container>div {
+    flex-basis: 33.3%;
+}
+
+#service .container .card-wrapper .card {
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#service .container .card-wrapper .card:hover {
+    transform: scale(1.03);
+}
+
+#service .container .card-wrapper .card svg,
+h3,
+p {
+    margin-bottom: 15px;
+}
+
+/* CONTACT STYLES */
+#contact .container {
+    display: flex;
+}
+
+#contact .container>div {
+    flex-basis: 50%;
+}
+
+#contact .container .content .contact-list {
+    list-style-type: none;
+}
+
+#contact .container .content .contact-list .contact-list-item {
+    margin: 15px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+#contact .container .form-content .input-wrapper {
+    margin-bottom: 15px;
+}
+
+#contact .container .form-content .input-wrapper:first-child {
+    display: flex;
+    gap: 10px;
+}
+
+#contact .input {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+#contact .btn {
+    border: none;
+    background-color: var(--main-color);
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+/* FOOTER STYLE  */
+#footer {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 60px 0;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#footer .container>div {
+    flex-basis: 33.33%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#footer .link-list {
+    list-style-type: none;
+}
+
+#footer .link-list .link-list-item {
+    margin-bottom: 15px;
+}
+
+#footer .link-list .link-list-item a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+#footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* GO TO TOP  */
+.go-to-top {
+    width: 40px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: orange;
+    /* send child element to center  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+.go-to-top svg {
+    width: 35px;
+}
+
+/* Responsive Design  */
+/* Medium Size  */
+@media all and (max-width: 1023px) {
+    .container {
+        width: 80%;
+    }
+}
+
+
+/* Small Size  */
+@media all and (max-width: 767px) {
+
+    /* COMMON STYLES */
+    .container {
+        width: 100%;
+    }
+
+    /* HERO STYLES */
+    #hero .container {
+        flex-direction: column;
+        height: 95vh;
+    }
+
+    #hero .container .content {
+        width: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #hero .container .img-div {
+        width: 100%;
+        height: 350px;
+        order: 1;
+    }
+
+    #hero .container .img-div img {
+        width: 100%;
+    }
+
+    /* ABOUT STYLES */
+    #about .container {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* SKILL STYLES */
+    #skill .container {
+        padding: 0 15px;
+        flex-direction: column;
+    }
+
+    /* SERVICE STYLES  */
+    #service .container {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* CONTACT STYLES */
+    #contact .container {
+        padding: 0 15px;
+        flex-direction: column;
+    }
+
+    /* FOOTER STYLE  */
+    #footer .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
